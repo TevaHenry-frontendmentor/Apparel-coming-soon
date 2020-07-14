@@ -136,7 +136,7 @@ footer {
   justify-content: center;
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 950px) {
   body {
     display: grid;
     grid-template-columns: 3fr 2fr;
@@ -178,7 +178,7 @@ footer {
   p {
     font-size: 110%;
     width: 450px;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 
   input {
