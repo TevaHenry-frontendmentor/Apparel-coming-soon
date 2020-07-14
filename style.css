@@ -99,7 +99,7 @@ input::placeholder {
   color: var(--soft-red);
   position: absolute;
   top: 60px;
-  right: 90px;
+  left: 30px;
 }
 
 .error::before {
@@ -121,12 +121,14 @@ button {
   position: absolute;
   right: 0;
   transition: transform 0.2s ease;
+  z-index: 5;
 }
 
 button:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: transform 0.2s ease;
   cursor: pointer;
+  background:  hsl(0, 80%, 86%);
 }
 
 footer {
@@ -168,28 +170,24 @@ footer {
   }
 
   h1 {
-    font-size: 50px;
+    font-size: 60px;
     letter-spacing: 20px;
     line-height: 120%;
   }
 
-  h1 > span {
-    font-weight: 400;
-  }
-
   p {
-    width: 420px;
+    font-size: 110%;
+    width: 450px;
     margin-bottom: 1rem;
   }
 
   input {
-    width: 420px;
+    width: 450px;
   }
 
   button {
     width: 90px;
   }
-
 } 
 
 .attribution {
