@@ -1,0 +1,204 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+:root {
+  --desaturated-red: hsl(0, 36%, 70%);
+  --soft-red: hsl(0, 93%, 68%);
+  --dark-grayish-red: hsl(0, 6%, 24%);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Josefin Sans', sans-serif;
+  color: var(--desaturated-red);
+  font-weight: 400;
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+
+header {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  margin-left: 10%;
+}
+
+header > img {
+  height: 35%;
+}
+
+main {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.hero {
+  width: 100%;
+  height: 30%;
+  background-image: url(./images/hero-mobile.jpg);
+  background-size: cover;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 300;
+  text-transform: uppercase;
+  word-spacing: 100vw;
+  letter-spacing: 10px;
+  margin-top: 20px;
+}
+
+h1 > span {
+  font-weight: 600;
+  color: var(--dark-grayish-red);
+}
+
+p {
+  width: 320px;
+  line-height: 25px;
+  font-weight: 300;
+}
+
+form {
+  display: flex;
+  position: relative;
+}
+
+input {
+  height: 50px;
+  width: 310px;
+  border: 1px solid var(--desaturated-red);
+  border-radius: 30px;
+  background: transparent;
+  padding-left: 30px;
+}
+
+input::placeholder {
+  opacity: 0.5;
+  color: var(--desaturated-red);
+}
+
+.error > input {
+  border: 2px solid var(--soft-red);
+}
+
+.error::after {
+  content: "Please provide a valid email.";
+  font-size: 12px;
+  width: 300px;
+  color: var(--soft-red);
+  position: absolute;
+  top: 60px;
+  right: 90px;
+}
+
+.error::before {
+  content: url(./images/icon-error.svg);
+  position: absolute;
+  right: 110px;
+  top: 12px;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  height: 50px;
+  width: 70px;
+  border-radius: 40px;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  position: absolute;
+  right: 0;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 900px) {
+  body {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 20vh 1fr;
+    grid-template-areas:
+    "header hero"
+    "content hero";
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-size: 60%;
+  }
+
+  header {
+    grid-area: header;
+    margin-left: 20%;
+    margin-top: 5vh;
+  }
+
+  .hero {
+    grid-area: hero;
+    background-image: url(./images/hero-desktop.jpg);
+    height: 100%;
+  }
+
+  main {
+    grid-area: content;
+    align-items: flex-start;
+    text-align: start;
+    width: 100%;
+    height: 70%;
+    padding-left: 20%;
+  }
+
+  h1 {
+    font-size: 50px;
+    letter-spacing: 20px;
+    line-height: 120%;
+  }
+
+  h1 > span {
+    font-weight: 400;
+  }
+
+  p {
+    width: 420px;
+    margin-bottom: 1rem;
+  }
+
+  input {
+    width: 420px;
+  }
+
+  button {
+    width: 90px;
+  }
+
+} 
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 5px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

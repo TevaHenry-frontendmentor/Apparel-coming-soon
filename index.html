@@ -6,28 +6,32 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
   <title>Frontend Mentor | Base Apparel coming soon page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-  We're coming soon
-
-  Hello fellow shoppers! We're currently building our new fashion store. 
-  Add your email below to stay up-to-date with announcements and our launch deals.
-
-  Email Address
-  
+  <header>
+    <img src="./images/logo.svg" alt="Base Apparel">
+  </header>
+  <div class="hero"></div>
+  <main>
+      <h1>We're <span>coming soon</span></h1>
+      <p>Hello fellow shoppers! We're currently building our new fashion store. 
+        Add your email below to stay up-to-date with announcements and our launch deals.</p>
+      <form action="">
+        <input type="email" placeholder="Email Address">
+        <button type="button"><img src="./images/icon-arrow.svg" alt="submit"></button>
+      </form>
+  </main>
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel=”noreferrer noopener”>Frontend Mentor</a>. 
       Coded by <a href="https://tevahenry.com">Teva Henry</a>.
     </p>
   </footer>
+  <script src="./index.js"></script>
 </body>
 </html>
