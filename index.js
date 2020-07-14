@@ -4,10 +4,10 @@ const form = document.querySelector('form')
 
 const emailCheck = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 
-const handleErr = () => {
+const handleErr = (e) => {
   if (!emailCheck.test(inputField.value)) {
+    e.preventDefault()
     form.classList.add('error')
-    // inputField.classList.add('error')
   } else {
     // submit
   }
